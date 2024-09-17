@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPFAppDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAppDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400">
+    <Grid>
+        <StackPanel>
+            <WrapPanel HorizontalAlignment="Center" Margin="5">
+                <TextBlock Width="150" Text="Enter a:" FontSize="15" FontWeight="Bold" Foreground="Blue" HorizontalAlignment="Center"/>
+                <TextBox x:Name="txta" FontSize="15" FontWeight="Bold" Width="200" Foreground="Orange" HorizontalAlignment="Center" GotFocus="txta_GotFocus" LostFocus="txta_LostFocus" KeyDown="txta_KeyDown"/>
+            </WrapPanel>
+            
+            <WrapPanel HorizontalAlignment="Center" Margin="5">
+                <TextBlock Width="150"  Text="Enter b:" FontSize="15" FontWeight="Bold" Foreground="Blue" HorizontalAlignment="Center"/>
+                <TextBox x:Name="txtb" FontSize="15" FontWeight="Bold" Width="200" Foreground="Orange" HorizontalAlignment="Center" LostFocus="txtb_LostFocus" GotFocus="txtb_GotFocus" KeyDown="txtb_KeyDown"/>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center" Margin="5">
+                <TextBlock Width="150" Text="Choose an option:" FontSize="15" FontWeight="Bold" Foreground="Blue" HorizontalAlignment="Center"/>
+                <ComboBox Name="cboOption" Width="200" SelectionChanged="cboOption_SelectionChanged">
+                    <ComboBoxItem  Content="+"/>
+                    <ComboBoxItem Content="-"/>
+                    <ComboBoxItem Content="*"/>
+                    <ComboBoxItem Content="/"/>
+                </ComboBox>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBlock  Width="150"  Text="Result:" FontSize="15" FontWeight="Bold" Foreground="Blue" HorizontalAlignment="Center"/>
+                <TextBox Name="txtResult" FontSize="15" IsReadOnly="True" FontWeight="Bold" Width="200" Foreground="Orange" HorizontalAlignment="Center"/>
+            </WrapPanel>
+            <Button Name="btnExe" Content="EXECUTE" FontWeight="Bold" FontSize="15" Width="100" Margin="0,20,0,0" Click="btnExe_Click"/>
+        </StackPanel>       
+    </Grid>
+</Window>

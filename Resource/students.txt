@@ -1,0 +1,2 @@
+S001	Nguyen Van A	English	85
+S002	Tran Thi B	Japanese	90
